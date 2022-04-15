@@ -1,0 +1,63 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - want_work
+  - want_companion
+  - want_unsure
+  - work_can_train
+  - work_cannot_train
+  - companion_loved_back
+  - companion_not_care
+
+responses:
+  utter_greet:
+  - text: "Hello, Welcome to AdultPetFinder. I am here to help you choose a pet based on your preferences. Let's get started! \n 
+    Alright, lets narrow down some choices, what exactly are you looking for in a pet?"
+    
+  utter_work_response_1:
+  - text: "Are you willing to put in the effort towards training, caring, or maintaining this pet?"
+  
+  utter_work_response_1_yes:
+  - text: "You are pretty much limited to working dogs rn, what kind of work do you need?"
+  
+  utter_work_response_1_no:
+  - text: "You're pretty limited in choices, well, what kind of work we lookin' at?"
+    
+  utter_companion_response_1:
+  - text: "Do you want to feel loved back? or not care?"
+  
+  utter_companion_response_2:
+  - text: "For you or the family?"
+  
+  utter_companion_response_3:
+  - text: "Is noise a concern?"
+    
+  utter_unsure_response_1:
+  - text: "Ok, lets just ask some important general questions.\n Do you have any sensitivities to allergens?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
